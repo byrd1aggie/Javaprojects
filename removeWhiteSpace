@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+public class RemoveWhiteSpace {
+    public static void main(String args[]){
+        Scanner s = new Scanner(System.in);
+        System.out.println("Please write a String so I can remove all of the white space.");
+        String userString = s.nextLine();
+        userString = userString.replaceAll("\\s+","");
+        System.out.println(userString);
+    }
+}
