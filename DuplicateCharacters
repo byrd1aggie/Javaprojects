@@ -1,0 +1,22 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class DuplicateCharacters {
+	public static void main(String[] args) {
+		System.out.println("Please type in your String");
+		Scanner s = new Scanner(System.in);
+		String testString = s.nextLine();
+		
+	 	testString = testString.toLowerCase().replaceAll("\\s+","");
+	for (int i = 0; i < testString.length(); i++) {
+		String toRemove = ""+ testString.charAt(i);
+		String modString = testString.replaceAll(toRemove, "");
+		int numOfChar= testString.length() - modString.length();
+		if( testString.length() - modString.length() >= 1 ) {
+			System.out.println("There are "+ numOfChar + " " + testString.charAt(i) + " in your String");
+		}
+		testString = modString;
+	}
+
+	}
+}
