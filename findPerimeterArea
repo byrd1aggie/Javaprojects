@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class FindPerimeterArea {
+	  public static void main(String args []){
+	        Scanner  userInput= new Scanner(System.in);
+	        double length, width;
+
+	        System.out.println("What is the width of your rectangle?");
+	        length = userInput.nextDouble();
+
+	        System.out.println("What is the length of your rectangle?");
+	        width = userInput.nextDouble();
+
+	        System.out.println("The Perimeter of your rectangle is " + 2*(width + length) +
+	                " and the Area of your rectangle is " + (width * length) );
+	    }
+	}
