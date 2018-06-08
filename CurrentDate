@@ -1,0 +1,35 @@
+import java.util.Date;
+
+import java.text.SimpleDateFormat;
+
+public class CurrentDate {
+    public static void main(String args []){
+        Date dNow = new Date ();
+        SimpleDateFormat mmddyyTimeMM = new SimpleDateFormat("M/dd/yyyy hh:mm a");
+
+        SimpleDateFormat TimeSSAmPm = new SimpleDateFormat("hh:mm:ss a");
+
+        SimpleDateFormat MonDDYYYYTimeSS = new SimpleDateFormat("MMM dd, yyyy hh:mm:ss a");
+
+        SimpleDateFormat TimeMMAMPM = new SimpleDateFormat("hh:mm a");
+
+        SimpleDateFormat TimeSS = new SimpleDateFormat("hh:mm:ss a");
+
+        SimpleDateFormat TimeSSZone = new SimpleDateFormat("hh:mm:ss a zzz");
+
+        SimpleDateFormat MonDDYYYYTimeMM = new SimpleDateFormat("MMM d, yyyy hh:mm:ss a");
+
+        SimpleDateFormat MonthDDYYYYTimeSSZone = new SimpleDateFormat("MMMMMMMMM d, yyyy hh:mm:ss a zzz");
+
+        System.out.println(dNow.toString());
+        System.out.println(mmddyyTimeMM.format(dNow));
+        System.out.println(TimeSSAmPm.format(dNow));
+        System.out.println(MonDDYYYYTimeSS.format(dNow));
+        System.out.println(TimeMMAMPM.format(dNow));
+        System.out.println(TimeSS.format(dNow));
+        System.out.println(TimeSSZone.format(dNow));
+        System.out.println(MonDDYYYYTimeMM.format(dNow));
+        System.out.println(MonthDDYYYYTimeSSZone.format(dNow));
+    }
+
+}
