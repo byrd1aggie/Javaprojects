@@ -1,0 +1,55 @@
+package mathcode;
+import java.util.Scanner;
+
+public class MathMain {
+
+	public static void main(String[] args) {
+		Scanner userinput = new Scanner(System.in);
+		Scanner userinputdec = new Scanner (System.in);
+		int dec;
+		
+		System.out.println("Would you like to the estimation for pi or e? ");
+		String text = userinput.next();
+		
+		
+		boolean SC = false;
+		while (!SC) {
+		switch (text) {
+		case "pi" :
+		{
+			System.out.println("To what decimals would you like?");
+			dec = userinputdec.nextInt();
+			while(dec > 10) 
+			{
+				System.out.println("I can't do more than ten decimals. Try another number.");
+				dec = userinputdec.nextInt();
+				}
+			
+			Eulersconvergence pi = new Eulersconvergence();	
+			System.out.println(pi.EulersconvergenceCal(dec));
+			SC = true;
+			break;
+		}
+		case "e" : 
+		{
+			System.out.println("To what decimals would you like?");
+			dec = userinputdec.nextInt();
+			while(dec > 10) {
+				System.out.println("I can't do more than ten decimals. Try another number.");
+				dec = userinputdec.nextInt();
+				}
+			
+			EulerNumber e = new EulerNumber();
+			System.out.println(e.calEulerNumber(dec));
+			SC = true;
+			break;
+		}
+		default : 
+		{
+			System.out.println("Please enter either 'pi' or 'e'");
+			text = userinput.next(); 
+				}
+			}
+		}
+	}
+}
