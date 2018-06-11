@@ -1,0 +1,27 @@
+package mathcode;
+
+import java.text.DecimalFormat;
+
+public class EulerNumber {
+	public String calEulerNumber(int d){
+		double numer, den, e;
+		numer = den = e = 0;
+		String dec = "#.";
+		for (int i = 0; i < d; i++) {
+			dec += "#";
+		}
+		DecimalFormat df = new DecimalFormat(dec);			
+			for (double i = 0; i <= 91; i++) {
+				den = findingden(i);
+				e += (1)/(den); 
+			}
+			return  df.format(e) ;
+	}
+
+public double findingden(double b) {
+	if (b <= 1) {return 1;}
+	return b*findingden(b-1);
+	}
+}
+
+
